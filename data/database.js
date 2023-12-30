@@ -4,5 +4,5 @@ export const connectDB = ()=>{
         
 mongoose.connect(process.env.MONGO_URI, {
         dbName: "ToDo",
-}).then(() => console.log("Database connected")).catch((e) => console.log(e));
+}).then((c) => console.log(`Database connected with ${c.connection.host}`)).catch((e) => console.log(e));
 };
